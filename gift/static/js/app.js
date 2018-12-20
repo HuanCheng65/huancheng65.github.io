@@ -9,19 +9,28 @@ var app = new Vue({
   data: {
     loading: false,
     list: [],
+    realList: [],
     isStart: false,
     result: null,
+    realResult: null,
     title: "暂无结果",
     subtitle: "点击按钮开始"
   },
   methods: {
     refresh() {
       this.loading = true;
+      this.realList = [];
       query.order("order");
-      query.equalTo("except", "!=", "true");
       query.find().then(res => {
         this.list = res;
         this.loading = false;
+        res.forEach(element => {
+          if (element.except != true) {
+            for (var i = 1; i <= element.weight; i++) {
+              this.realList.push(element);
+            }
+          }
+        });
       }).catch(err => {
         this.loading = false;
         console.log(err)
@@ -30,27 +39,35 @@ var app = new Vue({
     newResult() {
       this.result = this.list[Math.round(Math.random() * (this.list.length - 1))]
     },
+    newRealResult() {
+      this.realResult = this.realList[Math.round(Math.random() * (this.realList.length - 1))]
+    },
     start() {
       this.isStart = true;
       var i = setInterval(() => {
-        app.newResult();
+        app.newResult()
+        app.newRealResult()
       }, 100);
-      var j, k;    
+      var j, k;
       setTimeout(() => {
         clearInterval(i);
         j = setInterval(() => {
-          app.newResult();
-        }, 30);
+          app.newResult()
+          app.newRealResult()
+        }, 50);
       }, 2000);
       setTimeout(() => {
         clearInterval(j);
         k = setInterval(() => {
-          app.newResult();
+          app.newResult()
+          app.newRealResult()
         }, 100);
       }, 5000);
       setTimeout(() => {
         clearInterval(k);
-        app.newResult();
+        app.newResult()
+        app.newRealResult()
+        this.result = this.realResult
         this.isStart = false;
       }, 7000);
     }
