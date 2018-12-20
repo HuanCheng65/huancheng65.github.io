@@ -1,0 +1,44 @@
+.app-content {
+    padding-top: 56px;
+}
+
+@media (min-width: 600px) {
+    .app-content {
+        padding-top: 64px;
+    }
+
+    .login-dialog {
+        max-width: 75% !important;
+        max-height: 90% !important;
+        position: relative !important;
+    }
+}
+
+.header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.mu-snackbar {
+    z-index: 99999999 !important;
+}
+
+.footer {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: .54;
+    letter-spacing: .08em;
+}
+
+.result-subtitle {
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -.02em;
+}
+
+.result-title {
+    font-size: 112px;
+    font-weight: 300;
+    letter-spacing: -.04em;
+}

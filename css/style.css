@@ -1,0 +1,218 @@
+.searchbar_icon {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.search_btn {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.searchbar_input_parent {
+    width: 100%;
+    display: inline-block;
+    height: 36px;
+    padding: 0;
+    margin-right: 8px;
+}
+
+.searchbar {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 75%;
+    background-color: #fff;
+    border-radius: 50px;
+    -webkit-transition: all .3s cubic-bezier(0, 0, .2, 1);
+    transition: all .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.mdui-headroom-unpinned-toolbar .searchbar {
+    width: 100%;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+#searchEngineMenu {
+    text-align: left;
+}
+
+@media (min-width: 600px) {
+    .mdui-appbar-with-toolbar {
+        padding-top: calc(64px + 52px) !important;
+    }
+}
+
+@media (max-width: 959px) and (orientation: landscape) {
+    .mdui-appbar-with-toolbar {
+        padding-top: calc(48px + 52px) !important;
+    }
+}
+
+.mdui-appbar-with-toolbar {
+    padding-top: calc(56px + 52px);
+}
+
+.website {
+    width: 85px;
+    text-align: center;
+    display: inline-block;
+}
+
+.custom_website {
+    display: inline-block;
+}
+
+.websiteIcon {
+    width: 85px;
+}
+
+.websites {
+    padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: #f8f8f9;
+    }
+    .appbar {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+    .searchbar {
+        background-color: transparent !important;
+    }
+    .suggest {
+        top: 116px !important;
+    }
+}
+
+.city {
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .weather_card {
+        padding-top: 16px;
+    }
+}
+
+.header {
+    height: 50px;
+}
+
+.appbar .mdui-icon {
+    color: #000 !important;
+}
+
+.appbar {
+    background-color: #03A9F4;
+    color: #fff;
+}
+
+.searchbar_input_parent>.mdui-textfield-input:not([disabled]):hover {
+    box-shadow: none;
+    border: 0;
+}
+
+.searchbar_input_parent>.mdui-textfield-input {
+    border: 0;
+}
+
+.searchbar_icon_img {
+    height: 36px;
+    width: 20px;
+}
+
+.suggest {
+    width: 100%;
+    position: absolute;
+    top: 108px;
+    color: #000;
+    z-index: 2;
+    background-color: #fff;
+    -webkit-transition: opacity .3s cubic-bezier(0, 0, .2, 1);
+    transition: opacity .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.suggest[show=true] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.suggest:not([show=true]) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.loading-tip {
+    margin: 8px;
+}
+
+.weather_copyright_logo {
+    width: 14px;
+    height: 14px;
+}
+
+.footer {
+    padding: 16px;
+}
+
+.reBtn,
+.edit_wrapper {
+    position: absolute;
+    right: 8px;
+}
+
+.copyright {
+    margin: 16px;
+}
+
+.footer span {
+    display: block;
+}
+
+.empty_icon {
+    width: 100%;
+    font-size: 60px;
+    padding: 16px 0;
+}
+
+.empty_tip {
+    width: 100%;
+}
+
+.empty {
+    margin: 16px;
+}
+
+.addBtn_empty {
+    margin: 16px 0;
+}
+
+.custom_list:not(.edit) .remove_btn {
+    display: none;
+}
+
+.custom_list.edit .remove_btn {
+    z-index: 100;
+}
+
+.remove_btn {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+    background: none;
+    transition: .3s;
+}

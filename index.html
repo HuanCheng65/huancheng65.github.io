@@ -1,0 +1,172 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Polaris</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=69ERYgMrSjL7snwxy7bZfF2pgd6Uj5dw"></script>
+</head>
+
+<body class="mdui-appbar-with-toolbar">
+    <div id="app">
+        <div class="mdui-dialog" id="addDialog">
+            <div class="mdui-dialog-title">添加网站</div>
+            <div class="mdui-dialog-content">
+                <div class="mdui-container-fluid">
+                    <div class="mdui-row-xs-1 mdui-row-sm-2">
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">网站名称</label>
+                                <input v-model="websiteName" class="mdui-textfield-input" type="text" required/>
+                                <div class="mdui-textfield-error">必填</div>
+                            </div>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">网址</label>
+                                <input v-model="websiteUrl" class="mdui-textfield-input" type="url" required/>
+                                <div class="mdui-textfield-error">填写的网址无效</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+                <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>确认添加</button>
+            </div>
+        </div>
+        <div class="mdui-appbar mdui-appbar-fixed appbar mdui-appbar-scroll-toolbar-hide">
+            <div class="mdui-toolbar mdui-color-theme">
+                <span class="mdui-typo-headline">Polaris</span>
+                <div class="mdui-toolbar-spacer"></div>
+            </div>
+            <form target="_blank" :action="searchUrl" id="search" class="searchbar mdui-center mdui-valign">
+                <div class="searchbar_icon" mdui-menu="{target: '#searchEngineMenu'}">
+                    <img class="searchbar_icon_img" :src="searchIcon">
+                </div>
+                <ul class="mdui-menu" id="searchEngineMenu">
+                    <li class="mdui-menu-item">
+                        <a href="javascript:;" @click="setSearchEngine('Baidu')" class="mdui-ripple">Baidu</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a href="javascript:;" @click="setSearchEngine('Google')" class="mdui-ripple">Google</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a href="javascript:;" @click="setSearchEngine('Bing')" class="mdui-ripple">Bing</a>
+                    </li>
+                </ul>
+                <div class="mdui-textfield searchbar_input_parent">
+                    <input class="mdui-textfield-input" v-model="keyword" type="text" :name="searchName" autocomplete="off" placeholder="搜索从这里开始"
+                    />
+                </div>
+                <button type="submit" class="mdui-btn mdui-btn-icon mdui-ripple search_btn">
+                    <i class="mdui-icon material-icons">search</i>
+                </button>
+            </form>
+            <ul class="mdui-list mdui-shadow-1 suggest" :show="showSuggest">
+                <li v-for="obj in suggestList" class="mdui-list-item mdui-ripple" @click="search(obj.word)">{{ obj.word }}</li>
+                <li class="mdui-list-item mdui-ripple" @click="closeSuggest">关闭</li>
+            </ul>
+        </div>
+        <div class="mdui-m-t-2 mdui-container">
+            <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-8">
+                    <div class="mdui-card">
+                        <div class="mdui-card-header header">
+                            <span>导航</span>
+                        </div>
+                        <div class="mdui-divider"></div>
+                        <div class="mdui-card-content websites">
+                            <ul class="mdui-list mdui-m-x-1">
+                                <li v-for="obj in website" class="website mdui-ripple mdui-m-x-1">
+                                    <a target="_blank" :href="obj.link">
+                                        <div>
+                                            <img class="websiteIcon" :src="'img/' + obj.icon" />
+                                        </div>
+                                        <span>{{ obj.name }}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mdui-card mdui-m-t-2">
+                        <div class="mdui-card-header header mdui-valign">
+                            <span>我的网站</span>
+                            <div v-if="custom.length > 0" class="edit_wrapper">
+                                <button v-if="editCustom" class="mdui-btn mdui-ripple mdui-btn-dense mdui-typo-caption-opacity add_btn" mdui-dialog="{target: '#addDialog'}">添加网站</button>
+                                <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-typo-caption-opacity edit_btn" @click="editCustomWebsite">
+                                    <span v-if="custom.length > 0 & !editCustom">编辑</span>
+                                    <span v-if="custom.length > 0 & editCustom">完成编辑</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mdui-divider"></div>
+                        <div class="mdui-card-content websites">
+                            <ul v-if="custom.length > 0" class="mdui-list custom_list mdui-m-x-1" :class="{'edit':editCustom}">
+                                <li v-for="(obj,index) in custom" class="mdui-m-x-1 custom_website">
+                                    <button class="remove_btn mdui-btn mdui-ripple" @click="removeCustom(index)">
+                                        <i class="mdui-icon material-icons">close</i>
+                                    </button>
+                                    <a target="_blank" class="mdui-ripple mdui-btn" :href="obj.link" :disabled="editCustom">
+                                        <span>{{ obj.name }}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <template v-if="custom.length == 0">
+                                <div class="center empty">
+                                    <i class="mdui-icon material-icons empty_icon">assignment_late</i>
+                                    <br />
+                                    <span class="empty_tip">暂无网站</span>
+                                    <br />
+                                    <button mdui-dialog="{target: '#addDialog'}" class="mdui-btn mdui-btn-block mdui-btn-raised mdui-color-indigo addBtn_empty mdui-ripple">添加</button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4 weather_card">
+                    <div class="mdui-card">
+                        <div class="mdui-card-header header mdui-valign">
+                            <span>天气</span>
+                            <span class="mdui-typo-caption-opacity city" v-if="city != ''">{{ city }}</span>
+                            <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-typo-caption-opacity reBtn" @click="reGetLocation">重新定位</button>
+                        </div>
+                        <div class="mdui-divider"></div>
+                        <div class="mdui-card-content">
+                            <div id="loading" v-if="!weatherLoaded" class="mdui-center mdui-valign center">
+                                <div class="mdui-spinner mdui-spinner-colorful"></div>
+                                <span class="loading-tip">加载中</span>
+                            </div>
+                            <div id="weather" v-if="weatherLoaded">
+                                <span class="mdui-typo-title-opacity">{{ getSkycon(app.weather.result.daily.skycon[0].value) }}</span>
+                                <br />
+                                <span class="mdui-typo-subheading-opacity">最高&nbsp;{{ app.weather.result.daily.temperature[0].max }}°&nbsp;最低&nbsp;{{ app.weather.result.daily.temperature[0].min
+                                    }}°
+                                </span>
+                                <br />
+                                <span class="mdui-typo-caption-opacity">{{ app.weather.result.hourly.description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="weather_copyright mdui-typo-caption-opacity center">
+                <span class="mdui-center center">天气数据来自彩云天气</span>
+                <br />
+                <span class="mdui-center center">by HuanChengStudio</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

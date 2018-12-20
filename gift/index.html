@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>抽奖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css">
+    <script src="static/js/bmob.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/muse-ui-toast/dist/muse-ui-toast.all.css" />
+    <script src="https://unpkg.com/muse-ui-toast/dist/muse-ui-toast.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/muse-ui-loading/dist/muse-ui-loading.all.css" />
+    <script src="https://unpkg.com/muse-ui-loading/dist/muse-ui-loading.js"></script>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <mu-appbar class="header" color="primary">
+            抽奖
+        </mu-appbar>
+        <div class="app-content">
+            <mu-container style="margin: 16px auto;">
+                <mu-paper v-loading="loading" style="position: relative;padding: 16px;" :z-depth="1">
+                    <mu-flex justify-content="center">
+                        <mu-flex class="result-title" justify-content="center"fill>{{result != null ? result.order : title}}</mu-flex>
+                    </mu-flex>
+                    <mu-flex justify-content="center">
+                        <mu-flex class="result-subtitle" justify-content="center" fill>{{result != null ? result.name : subtitle}}</mu-flex>
+                    </mu-flex>
+                    <mu-flex justify-content="center" align-items="center">
+                      <mu-button @click="start" :disabled="isStart" full-width color="primary">开始</mu-button>
+                    </mu-flex>
+                </mu-paper>
+            </mu-container>
+            <mu-flex justify-content="center" align-items="center" style="padding: 8px;" wrap="wrap">
+                <span class="footer">by HuanChengStudio</span>
+            </mu-flex>
+        </div>
+    </div>
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>
