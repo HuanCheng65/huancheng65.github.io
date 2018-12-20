@@ -32,13 +32,13 @@
 }
 
 .result-subtitle {
-    font-size: 56px;
+    font-size: 45px;
     font-weight: 400;
-    letter-spacing: -.02em;
+    letter-spacing: 0;
 }
 
 .result-title {
-    font-size: 112px;
-    font-weight: 300;
-    letter-spacing: -.04em;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -.02em;
 }
