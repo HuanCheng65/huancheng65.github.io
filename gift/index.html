@@ -18,27 +18,69 @@
 
 <body>
     <div id="app">
-        <mu-appbar class="header" color="primary">
-            抽奖
-        </mu-appbar>
-        <div class="app-content">
-            <mu-container style="margin: 16px auto;">
-                <mu-paper v-loading="loading" style="position: relative;padding: 16px;" :z-depth="1">
-                    <mu-flex justify-content="center">
-                        <mu-flex class="result-title" justify-content="center"fill>{{result != null ? result.order : title}}</mu-flex>
-                    </mu-flex>
-                    <mu-flex justify-content="center">
-                        <mu-flex class="result-subtitle" justify-content="center" fill>{{result != null ? result.name : subtitle}}</mu-flex>
-                    </mu-flex>
-                    <mu-flex justify-content="center" align-items="center">
-                      <mu-button @click="start" :disabled="isStart" full-width color="primary">开始</mu-button>
-                    </mu-flex>
-                </mu-paper>
-            </mu-container>
-            <mu-flex justify-content="center" align-items="center" style="padding: 8px;" wrap="wrap">
-                <span class="footer">by HuanChengStudio</span>
-            </mu-flex>
-        </div>
+        <template v-if="first">
+            <mu-dialog dialog-class="login-dialog" width="360" transition="scale" fullscreen :open.sync="openLogin">
+                <mu-appbar color="primary" title="登录后台">
+                    <mu-button slot="left" icon @click="closeLoginDialog">
+                        <mu-icon value="close"></mu-icon>
+                    </mu-button>
+                </mu-appbar>
+                <div style="padding: 24px;">
+                    <mu-form ref="form" :model="validateForm">
+                        <mu-form-item label="用户名" prop="username" :rules="usernameRules">
+                            <mu-text-field v-model="validateForm.username" prop="username"></mu-text-field>
+                        </mu-form-item>
+                        <mu-form-item label="密码" prop="password" :rules="passwordRules">
+                            <mu-text-field type="password" v-model="validateForm.password" prop="password"></mu-text-field>
+                        </mu-form-item>
+                        <mu-form-item>
+                            <mu-button color="primary" @click="submit">提交</mu-button>
+                            <mu-button @click="clear">重置</mu-button>
+                        </mu-form-item>
+                    </mu-form>
+                </div>
+            </mu-dialog>
+            <mu-appbar class="header" color="primary">
+                抽奖
+                <mu-button v-if="getUser() == null" @click="openLoginDialog" icon slot="right">
+                    <mu-icon value="account_circle">
+                        </my-icon>
+                </mu-button>
+                <mu-button v-if="getUser() != null" href="admin.html" icon slot="right">
+                    <mu-icon value="adb">
+                        </my-icon>
+                </mu-button>
+            </mu-appbar>
+            <div class="app-content">
+                <mu-container style="margin: 16px auto;">
+                    <mu-paper v-loading="loading" style="position: relative;padding: 16px;" :z-depth="1">
+                        <mu-button @click="refresh" icon style="float: right;position: absolute;top: 4px;right: 4px;">
+                            <mu-icon value="refresh"></mu-icon>
+                        </mu-button>
+                        <mu-flex justify-content="center">
+                            <mu-flex class="result-title" justify-content="center" fill>{{result != null ? result.order
+                                :
+                                title}}</mu-flex>
+                        </mu-flex>
+                        <mu-flex justify-content="center">
+                            <mu-flex class="result-subtitle" justify-content="center" fill>{{result != null ?
+                                result.name :
+                                subtitle}}</mu-flex>
+                        </mu-flex>
+                        <mu-flex justify-content="center" style="padding: 8px;" align-items="center">
+                            <mu-button @click="start" :disabled="isStart" full-width color="primary">{{result == null ?
+                                "开始" : isStart ? "正在抽奖" : "再来一个"}}</mu-button>
+                        </mu-flex>
+                        <mu-flex justify-content="center" align-items="center" style="padding: 8px;" wrap="wrap">
+                            <span class="footer">概率：{{Math.round(1/list.length*10000)/100}}%</span>
+                        </mu-flex>
+                    </mu-paper>
+                </mu-container>
+                <mu-flex justify-content="center" align-items="center" style="padding: 8px;" wrap="wrap">
+                    <span class="footer">by HuanChengStudio</span>
+                </mu-flex>
+            </div>
+        </template>
     </div>
     <script src="static/js/app.js"></script>
 </body>
