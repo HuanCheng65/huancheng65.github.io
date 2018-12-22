@@ -84,7 +84,7 @@ var app = new Vue({
       if (this.number >= 0 & this.number <= 30) {
         timeout = 1 * (30 + ((30 - this.number) * 10));
       } else if (this.number > 30 & this.number <= 135) {
-        timeout = 30;
+        timeout = 50;
       } else if (this.number > 135) {
         timeout = 1 * (30 - ((135 - this.number) * 25));
       }
