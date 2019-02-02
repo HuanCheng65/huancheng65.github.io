@@ -1,17 +1,17 @@
 {
     "stable": {
-        "versionName": "3.4.2",
-        "versionCode": 3422,
-        "updateContent": "",
-        "downloadUrl": ""
+        "version_name": "3.4.2",
+        "version_code": 3422,
+        "update_content": "",
+        "download_url": ""
     },
     "beta": {
-        "versionName": "3.4.2 Beta 2",
-        "versionCode": 3421,
-        "updateContent": "",
-        "downloadUrl": ""
+        "version_name": "3.4.2 Beta 2",
+        "version_code": 3421,
+        "update_content": "",
+        "download_url": ""
     },
     "config": {
-        "enableBetaUpdate": true
+        "enable_beta": true
     }
 }
