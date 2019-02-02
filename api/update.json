@@ -1,0 +1,17 @@
+{
+    "stable": {
+        "versionName": "3.4.2",
+        "versionCode": 3422,
+        "updateContent": "",
+        "downloadUrl": ""
+    },
+    "beta": {
+        "versionName": "3.4.2 Beta 2",
+        "versionCode": 3421,
+        "updateContent": "",
+        "downloadUrl": ""
+    },
+    "config": {
+        "enableBetaUpdate": true
+    }
+}
