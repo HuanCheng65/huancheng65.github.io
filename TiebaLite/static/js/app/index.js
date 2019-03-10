@@ -22,7 +22,7 @@
     var app = new Vue({
         el: "#app",
         data: {
-            api: "https://huancheng65.coding.me/TiebaLite/update.json",
+            api: "https://huancheng65.github.io/TiebaLite/update.json",
             data: null,
             loaded: false,
             title: "",
