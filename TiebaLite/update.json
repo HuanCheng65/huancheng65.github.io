@@ -2,18 +2,18 @@
     "stable": {
         "type": 0,
         "enable": true,
-        "version_name": "3.6.0.1",
-        "version_code": 3601,
+        "version_name": "3.6.0.2",
+        "version_code": 3602,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.0.1 正式版:\r\n· 新增 楼中楼楼主标识\r\n· 新增 吧经验条\r\n· 优化 关于页面\r\n· 优化 搜贴页面\r\n· 修复 部分吧加载失败\r\n· 修复 搜索失败\r\n· 修复 一些已知问题",
-        "download_url": "https://github.com/HuanCheng65/huancheng65.github.io/releases/download/3601/3601.apk",
+        "update_content": "3.6.0.2 正式版:\r\n· 修复 部分已知问题\r\n\r\n3.6.0.1 正式版:\r\n· 新增 楼中楼楼主标识\r\n· 新增 吧经验条\r\n· 优化 关于页面\r\n· 优化 搜贴页面\r\n· 修复 部分吧加载失败\r\n· 修复 搜索失败\r\n· 修复 部分已知问题",
+        "download_url": "https://github.com/HuanCheng65/huancheng65.github.io/releases/download/3602/3602.apk",
         "web_disk": [{
-            "link": "https://www.lanzous.com/i3jc69e",
+            "link": "https://www.lanzous.com/i3jepef",
             "name": "蓝奏云",
             "password": null
         },{
-            "link": "https://share.weiyun.com/5GQsTgL",
+            "link": "https://share.weiyun.com/5X64zpH",
             "name": "微云",
             "password": null
         }]
