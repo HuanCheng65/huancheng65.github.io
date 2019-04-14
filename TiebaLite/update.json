@@ -2,25 +2,21 @@
     "stable": {
         "type": 0,
         "enable": true,
-        "version_name": "3.6.0.3",
-        "version_code": 3603,
+        "version_name": "3.6.1",
+        "version_code": 3610,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.0.3 正式版:\r\n· 修复 部分吧闪退问题\r\n\r\n3.6.0.1 正式版:\r\n· 新增 楼中楼楼主标识\r\n· 新增 吧经验条\r\n· 优化 关于页面\r\n· 优化 搜贴页面\r\n· 修复 部分吧加载失败\r\n· 修复 搜索失败\r\n· 修复 部分已知问题",
-        "download_url": "https://github.com/HuanCheng65/huancheng65.github.io/releases/download/3603/3603.apk",
+        "update_content": "3.6.1 正式版:\r\n· 新增 全新个人中心\r\n· 新增 删除自己发的贴/回复\r\n· 新增 举报回复\r\n· 新增 服务中心\r\n· 优化 浏览体验\r\n· 修复 部分已知问题",
+        "download_url": "https://tiebalite-1251728084.file.myqcloud.com/3610.apk",
         "web_disk": [{
-            "link": "https://www.lanzous.com/i3kp08b",
+            "link": "https://www.lanzous.com/i3ruyed",
             "name": "蓝奏云",
-            "password": null
-        },{
-            "link": "https://share.weiyun.com/5RwsXGF",
-            "name": "微云",
             "password": null
         }]
     },
     "beta": {
         "type": 1,
-        "enable": true,
+        "enable": false,
         "version_name": "3.6.1 Beta 2",
         "version_code": 3607,
         "cancelable": true,
