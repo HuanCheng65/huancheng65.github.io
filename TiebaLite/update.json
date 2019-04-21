@@ -16,15 +16,15 @@
     },
     "beta": {
         "type": 1,
-        "enable": false,
-        "version_name": "3.6.1 Beta 2",
-        "version_code": 3607,
+        "enable": true,
+        "version_name": "3.6.2 Beta 1",
+        "version_code": 3612,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.1 Beta 2 (3607):\r\n· 新增 全新个人中心\r\n· 新增 删除自己发的贴\r\n· 优化 贴页面\r\n· 去除 顶栏自动隐藏\r\n· 修复 一些已知问题",
-        "download_url": "https://github.com/HuanCheng65/huancheng65.github.io/releases/download/3610%CE%B22/app-signed-release.apk",
+        "update_content": "3.6.2 Beta 1 (3612):\r\n· 新增 自动签到\r\n· 新增 搜索记录\r\n· 优化 主题配色\r\n· 优化 加载动画\r\n· 修复 一些已知问题",
+        "download_url": "https://tiebalite-1251728084.file.myqcloud.com/3612.apk",
         "web_disk": [{
-            "link": "https://www.lanzous.com/i3r40gf",
+            "link": "https://www.lanzous.com/i3uwzdi",
             "name": "蓝奏云",
             "password": null
         }]
