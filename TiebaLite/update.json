@@ -2,12 +2,12 @@
     "stable": {
         "type": 0,
         "enable": true,
-        "version_name": "3.6.2",
-        "version_code": 3620,
-        "cancelable": true,
-        "cancelable_version": 0,
-        "update_content": "3.6.2 正式版:\r\n· 新增 搜索记录\r\n· 优化 搜索样式\r\n· 优化 回贴验\r\n· 修复 部分已知问题",
-        "download_url": "http://60.205.230.99:3300/3.6.2.apk",
+        "version_name": "3.6.2.1",
+        "version_code": 3621,
+        "cancelable": false,
+        "cancelable_version": 3621,
+        "update_content": "3.6.2.1 正式版:\r\n· 新增 回贴撤销/重做/清空\r\n· 新增 WebView 支持跳转第三方 App\r\n· 优化 WebView 网页位置权限申请\r\n· 优化 回贴\r\n· 优化 自动签到\r\n· 修复 部分已知问题",
+        "download_url": "https://tiebalite-1251728084.file.myqcloud.com/3621.apk",
         "web_disk": [{
             "link": "https://www.lanzous.com/i3xpryh",
             "name": "蓝奏云",
