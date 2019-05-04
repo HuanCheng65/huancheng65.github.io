@@ -30,15 +30,15 @@
         }]
     },
     "config": {
-        "enable_beta": true,
-        "qq_gruops": [{
-            "name": "一群",
-            "link": "",
-            "enable": true
-        },{
-            "name": "二群",
-            "link": "",
-            "enable": true
-        }]
-    }
+        "enable_beta": true
+    },
+    "qq_gruops": [{
+        "name": "一群",
+        "link": "",
+        "enable": true
+    },{
+        "name": "二群",
+        "link": "",
+        "enable": true
+    }]
 }
