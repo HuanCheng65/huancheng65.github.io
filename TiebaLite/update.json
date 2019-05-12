@@ -2,14 +2,14 @@
     "stable": {
         "type": 0,
         "enable": true,
-        "version_name": "3.6.2.2",
-        "version_code": 3622,
+        "version_name": "3.6.2.3",
+        "version_code": 3623,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.2.2 正式版:\r\n· 新增 使用系统浏览器\r\n· 新增 加入 QQ 群\r\n· 新增 状态栏遮罩开关\r\n· 修复 部分已知问题\r\n\r\n3.6.2.1 正式版:\r\n· 新增 回贴撤销/重做/清空\r\n· 新增 WebView 支持跳转第三方 App\r\n· 优化 WebView 网页位置权限申请\r\n· 优化 回贴\r\n· 优化 一键签到\r\n· 优化 自动签到\r\n· 修复 部分已知问题",
-        "download_url": "https://tiebalite-1251728084.file.myqcloud.com/3622.apk",
+        "update_content": "3.6.2.3 正式版:\r\n· 新增 复制楼层/自由复制\r\n· 新增 清除搜索记录\r\n· 新增 单击楼层回复\r\n· 优化 屏蔽用户\r\n· 优化 网络异常时的提示信息\r\n· 修复 贴内楼中楼单击无法回复\r\n· 修复 部分已知问题",
+        "download_url": "https://tiebalite-1251728084.file.myqcloud.com/3623.apk",
         "web_disk": [{
-            "link": "https://www.lanzous.com/i40njwd",
+            "link": "https://www.lanzous.com/i44tp7e",
             "name": "蓝奏云（推荐）",
             "password": null
         }]
