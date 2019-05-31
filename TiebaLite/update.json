@@ -2,15 +2,15 @@
     "stable": {
         "type": 0,
         "enable": true,
-        "version_name": "3.6.2.5",
-        "version_code": 3625,
+        "version_name": "3.6.2.6",
+        "version_code": 3626,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.2.5 正式版:\r\n· 修复 视频无法播放\r\n\r\n3.6.2.4 正式版:\r\n· 新增 吧置顶\r\n· 新增 视频小窗播放\r\n· 修复 部分已知问题",
-        "download_url": "https://tiebalite-1251728084.file.myqcloud.com/3625.apk",
+        "update_content": "3.6.2.6 正式版:\r\n· 修复 部分已知问题\r\n\r\n3.6.2.4 正式版:\r\n· 新增 吧置顶\r\n· 新增 视频小窗播放\r\n· 修复 部分已知问题",
+        "download_url": null,
         "web_disk": [{
-            "link": "https://www.lanzous.com/i4baibe",
-            "name": "蓝奏云（推荐）",
+            "link": "https://www.lanzous.com/i4dy1vi",
+            "name": "蓝奏云",
             "password": null
         }]
     },
