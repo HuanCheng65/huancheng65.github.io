@@ -1,9 +1,9 @@
 {
     "stable": {
         "type": 0,
-        "enable": false,
+        "enable": true,
         "version_name": "3.6.4",
-        "version_code": 3640,
+        "version_code": 3630,
         "cancelable": true,
         "cancelable_version": 0,
         "update_content": "3.6.4 正式版：\r\n· 新增 楼中楼复制/删除/举报\r\n· 新增 关注/取关用户\r\n· 新增 忽略更新\r\n· 优化 UI细节\r\n· 修复 部分已知问题",
