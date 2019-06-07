@@ -33,14 +33,9 @@
         "enable_beta": true
     },
     "qq_gruops": [{
-        "name": "一群",
-        "link": "https://jq.qq.com/?_wv=1027&k=5iYUkHf",
-        "number": "570582360",
-        "enabled": false
-    },{
         "name": "二群",
-        "link": "https://jq.qq.com/?_wv=1027&k=5RupUtw",
-        "number": "907445429",
+        "link": "https://jq.qq.com/?_wv=1027&k=5bPQ0RD",
+        "number": "716486383",
         "enabled": true
     }]
 }
