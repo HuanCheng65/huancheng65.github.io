@@ -2,14 +2,14 @@
     "stable": {
         "type": 0,
         "enable": true,
-        "version_name": "3.6.3",
-        "version_code": 3630,
+        "version_name": "3.6.4",
+        "version_code": 3640,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.3 正式版:\r\n· 新增 贴子排序\r\n· 优化 部分UI\r\n· 修复 部分已知问题",
+        "update_content": "3.6.4 正式版：\r\n· 新增 楼中楼复制/删除/举报\r\n· 新增 关注/取关用户\r\n· 新增 忽略更新\r\n· 优化 UI细节\r\n· 修复 部分已知问题",
         "download_url": null,
         "web_disk": [{
-            "link": "https://www.lanzous.com/i4ewuaf",
+            "link": "https://www.lanzous.com/i4hcqva",
             "name": "蓝奏云",
             "password": null
         }]
@@ -33,7 +33,14 @@
         "enable_beta": true
     },
     "qq_gruops": [{
+        "name": "一群",
+        "key": "bWOt9vT47cUOK1CHbcyT4VDD9jNWtYK3",
+        "link": "https://jq.qq.com/?_wv=1027&k=5iYUkHf",
+        "number": "570582360",
+        "enabled": false
+    },{
         "name": "②群",
+        "key": "BFEx19cSS50uI_6pcIYKoZX0WkSnooZj",
         "link": "https://jq.qq.com/?_wv=1027&k=5bPQ0RD",
         "number": "716486383",
         "enabled": true
