@@ -1,7 +1,7 @@
 {
     "stable": {
         "type": 0,
-        "enable": true,
+        "enable": false,
         "version_name": "3.6.4",
         "version_code": 3640,
         "cancelable": true,
