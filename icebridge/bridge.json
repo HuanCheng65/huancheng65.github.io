@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "bridges": [{
+    "packages": ["com.tencent.mobileqq"],
+    "intent_filters": [{
+      "schemes": ["http"],
+      "hosts": ["qm.qq.com"]
+    }, {
+      "schemes": ["mqq", "mqqapi", "mqqopensdkapi", "wtloginmqq"]
+    }, {
+      "schemes": ["imto"],
+      "hosts": ["qq"]
+    }]
+  }, {
+    "packages": ["com.tencent.mm"],
+    "intent_filters": [{
+      "schemes": ["weixin"]
+    }, {
+      "schemes": ["http"],
+      "host": ["weixin.qq.com"],
+      "path_prefix": ["/r/"]
+    }]
+  }],
+  "hooks": [{
+    "unfreeze_package": "com.tencent.mm",
+    "target_packages": ["*"],
+    "target_methods": [{
+      "class_name": "com.tencent.mm.opensdk.openapi.BaseWXApiImplV10",
+      "method_name": "sendReq",
+      "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"]
+    }]
+  }]
+}
