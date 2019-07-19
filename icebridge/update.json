@@ -1,6 +1,6 @@
 {
-    "config_version": 5,
-    "config_version_name": "v5",
+    "config_version": 6,
+    "config_version_name": "v6",
     "config_download_url": "https://huancheng65.github.io/icebridge/bridge.json",
     "app_version": 1,
     "app_version_name": "0.0.1",

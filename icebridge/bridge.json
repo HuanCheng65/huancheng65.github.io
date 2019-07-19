@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bridges": [{
         "packages": ["com.tencent.mobileqq", "com.tencent.tim"],
         "intent_filters": [{
@@ -62,19 +62,6 @@
         "packages": ["com.kuwo.player"],
         "intent_filters": [{
             "schemes": ["kwapp"]
-        }]
-    }, {
-        "packages": ["com.eg.android.AlipayGphone"],
-        "intent_filters": [{
-            "schemes": ["intent"],
-            "host": ["platformapi"],
-            "path_prefix": ["/startapp"]
-        }]
-    }, {
-        "packages": ["com.netease.cloudmusic"],
-        "intent_filters": [{
-            "schemes": ["intent"],
-            "host": ["song"]
         }]
     }],
     "hooks": [{
