@@ -1,33 +1,105 @@
 {
-  "version": 1,
-  "bridges": [{
-    "packages": ["com.tencent.mobileqq"],
-    "intent_filters": [{
-      "schemes": ["http"],
-      "hosts": ["qm.qq.com"]
+    "version": 5,
+    "bridges": [{
+        "packages": ["com.tencent.mobileqq", "com.tencent.tim"],
+        "intent_filters": [{
+            "schemes": ["http"],
+            "hosts": ["qm.qq.com"]
+        }, {
+            "schemes": ["mqq", "mqqapi", "mqqopensdkapi", "wtloginmqq"]
+        }, {
+            "schemes": ["imto"],
+            "hosts": ["qq"]
+        }]
     }, {
-      "schemes": ["mqq", "mqqapi", "mqqopensdkapi", "wtloginmqq"]
+        "packages": ["com.tencent.mm"],
+        "intent_filters": [{
+            "schemes": ["weixin"]
+        }, {
+            "schemes": ["http"],
+            "host": ["weixin.qq.com"],
+            "path_prefix": ["/r/"]
+        }]
     }, {
-      "schemes": ["imto"],
-      "hosts": ["qq"]
-    }]
-  }, {
-    "packages": ["com.tencent.mm"],
-    "intent_filters": [{
-      "schemes": ["weixin"]
+        "packages": ["com.huanchengfly.tieba.post", "com.baidu.tieba_mini", "com.baidu.tieba"],
+        "intent_filters": [{
+            "schemes": ["tbfrs", "tbpb"]
+        }, {
+            "schemes": ["http", "https"],
+            "host": ["tieba.baidu.com"]
+        }]
     }, {
-      "schemes": ["http"],
-      "host": ["weixin.qq.com"],
-      "path_prefix": ["/r/"]
+        "packages": ["com.zhihu.android", "com.zhihu.android.lite"],
+        "intent_filters": [{
+            "schemes": ["zhihu"]
+        }]
+    }, {
+        "packages": ["com.baidu.netdisk"],
+        "intent_filters": [{
+            "schemes": ["baiduyun", "yundownload", "yunacceptinvite", "bdnetdiskwap", "bdnetdisk"]
+        }]
+    }, {
+        "packages": ["com.downloading.main.baiduyundownload"],
+        "intent_filters": [{
+            "schemes": ["baiduyun", "yundownload", "yunacceptsharedir"]
+        }]
+    }, {
+        "packages": ["tv.danmaku.bili"],
+        "intent_filters": [{
+            "schemes": ["bilibili"]
+        }]
+    }, {
+        "packages": ["com.tencent.qqmusic"],
+        "intent_filters": [{
+            "schemes": ["qqmusic"]
+        }]
+    }, {
+        "packages": ["com.kugou.android"],
+        "intent_filters": [{
+            "schemes": ["kugou"]
+        }]
+    }, {
+        "packages": ["com.kuwo.player"],
+        "intent_filters": [{
+            "schemes": ["kwapp"]
+        }]
+    }, {
+        "packages": ["com.eg.android.AlipayGphone"],
+        "intent_filters": [{
+            "schemes": ["intent"],
+            "host": ["platformapi"],
+            "path_prefix": ["/startapp"]
+        }]
+    }, {
+        "packages": ["com.netease.cloudmusic"],
+        "intent_filters": [{
+            "schemes": ["intent"],
+            "host": ["song"]
+        }]
+    }],
+    "hooks": [{
+        "unfreeze_packages": ["com.tencent.mm"],
+        "target_packages": ["*"],
+        "target_methods": [{
+            "class_name": "com.tencent.mm.opensdk.openapi.BaseWXApiImplV10",
+            "method_name": "sendReq",
+            "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"]
+        }]
+    }, {
+        "unfreeze_packages": ["com.tencent.mm"],
+        "target_packages": ["tv.danmaku.bili", "com.kuaikan.comic"],
+        "target_methods": [{
+            "class_name": "com.tencent.mm.opensdk.openapi.WXApiImplV10",
+            "method_name": "sendReq",
+            "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"]
+        }]
+    }, {
+        "unfreeze_packages": ["com.tencent.mobileqq", "com.tencent.tim"],
+        "target_packages": ["*"],
+        "target_methods": [{
+            "class_name": "com.tencent.connect.auth.AuthAgent",
+            "method_name": "doLogin",
+            "params_classes": ["Activity", "String", "com.tencent.tauth.IUiListener", "boolean", "androidx.fragment.app.Fragment"]
+        }]
     }]
-  }],
-  "hooks": [{
-    "unfreeze_package": "com.tencent.mm",
-    "target_packages": ["*"],
-    "target_methods": [{
-      "class_name": "com.tencent.mm.opensdk.openapi.BaseWXApiImplV10",
-      "method_name": "sendReq",
-      "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"]
-    }]
-  }]
 }
