@@ -1,5 +1,5 @@
 {
-    "version": 6,
+    "version": 7,
     "bridges": [{
         "packages": ["com.tencent.mobileqq", "com.tencent.tim"],
         "intent_filters": [{
@@ -63,6 +63,36 @@
         "intent_filters": [{
             "schemes": ["kwapp"]
         }]
+    }, {
+        "packages": ["com.eg.android.AlipayGphone"],
+        "intent_filters": [{
+            "schemes": ["alipays", "alipayqr", "alipayauth", "alipayre"]
+        }]
+    }, {
+        "packages": ["com.netease.cloudmusic"],
+        "intent_filters": [{
+            "schemes": ["orpheus", "orpheus-cortana"]
+        }]
+    }, {
+        "packages": ["com.douban.frodo"],
+        "intent_filters": [{
+            "schemes": ["douban"]
+        }]
+    }, {
+        "packages": ["com.douban.radio"],
+        "intent_filters": [{
+            "schemes": ["doubanradio"]
+        }]
+    }, {
+        "packages": ["com.taobao.taobao"],
+        "intent_filters": [{
+            "schemes": ["taobao"]
+        }]
+    }, {
+        "packages": ["com.youku.phone"],
+        "intent_filters": [{
+            "schemes": ["youku"]
+        }]
     }],
     "hooks": [{
         "unfreeze_packages": ["com.tencent.mm"],
@@ -78,15 +108,47 @@
         "target_methods": [{
             "class_name": "com.tencent.mm.opensdk.openapi.WXApiImplV10",
             "method_name": "sendReq",
-            "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"]
+            "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"],
+            "return_value": {
+                "type": "boolean",
+                "value": "true"
+            }
         }]
     }, {
         "unfreeze_packages": ["com.tencent.mobileqq", "com.tencent.tim"],
         "target_packages": ["*"],
         "target_methods": [{
-            "class_name": "com.tencent.connect.auth.AuthAgent",
-            "method_name": "doLogin",
-            "params_classes": ["Activity", "String", "com.tencent.tauth.IUiListener", "boolean", "androidx.fragment.app.Fragment"]
+            "class_name": "com.tencent.tauth.Tencent",
+            "method_name": "login",
+            "params_classes": ["Activity", "String", "com.tencent.tauth.IUiListener"],
+            "return_value": {
+                "type": "int",
+                "value": "0"
+            }
+        },{
+            "class_name": "com.tencent.tauth.Tencent",
+            "method_name": "login",
+            "params_classes": ["Activity", "String", "com.tencent.tauth.IUiListener", "boolean"],
+            "return_value": {
+                "type": "int",
+                "value": "0"
+            }
+        },{
+            "class_name": "com.tencent.tauth.Tencent",
+            "method_name": "login",
+            "params_classes": ["androidx.fragment.app.Fragment", "String", "com.tencent.tauth.IUiListener"],
+            "return_value": {
+                "type": "int",
+                "value": "0"
+            }
+        },{
+            "class_name": "com.tencent.tauth.Tencent",
+            "method_name": "login",
+            "params_classes": ["androidx.fragment.app.Fragment", "String", "com.tencent.tauth.IUiListener", "boolean"],
+            "return_value": {
+                "type": "int",
+                "value": "0"
+            }
         }]
     }]
 }
