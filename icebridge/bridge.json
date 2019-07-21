@@ -1,5 +1,5 @@
 {
-    "version": 7,
+    "version": 8,
     "bridges": [{
         "packages": ["com.tencent.mobileqq", "com.tencent.tim"],
         "intent_filters": [{
@@ -100,7 +100,11 @@
         "target_methods": [{
             "class_name": "com.tencent.mm.opensdk.openapi.BaseWXApiImplV10",
             "method_name": "sendReq",
-            "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"]
+            "params_classes": ["com.tencent.mm.opensdk.modelbase.BaseReq"],
+            "return_value": {
+                "type": "boolean",
+                "value": "true"
+            }
         }]
     }, {
         "unfreeze_packages": ["com.tencent.mm"],
