@@ -6,10 +6,10 @@
         "version_code": 3641,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.4 正式版：\r\n· 新增 楼中楼复制/删除/举报\r\n· 新增 关注/取关用户\r\n· 新增 忽略更新\r\n· 优化 UI细节\r\n· 修复 部分已知问题",
+        "update_content": "3.7.7 正式版：\r\n· 优化了部分页面 UI\r\n· 新增“我的收藏”页面更新时间显示\r\n· 修复了部分已知 Bugs\r\n· 其他细节和稳定性优化",
         "download_url": null,
         "web_disk": [{
-            "link": "https://www.lanzous.com/i4hd8sf",
+            "link": "https://www.lanzous.com/i6uz9hc",
             "name": "蓝奏云",
             "password": null
         }]
@@ -17,27 +17,23 @@
     "beta": {
         "type": 1,
         "enable": false,
-        "version_name": "3.6.2 Beta 1",
-        "version_code": 3612,
+        "version_name": "",
+        "version_code": 0,
         "cancelable": true,
         "cancelable_version": 0,
-        "update_content": "3.6.2 Beta 1 (3612):\r\n· 新增 自动签到\r\n· 新增 搜索记录\r\n· 优化 主题配色\r\n· 优化 加载动画\r\n· 修复 一些已知问题",
-        "download_url": "https://tiebalite-1251728084.file.myqcloud.com/3612.apk",
-        "web_disk": [{
-            "link": "https://www.lanzous.com/i3uwzdi",
-            "name": "蓝奏云（推荐）",
-            "password": null
-        }]
+        "update_content": "",
+        "download_url": "",
+        "web_disk": []
     },
     "config": {
         "enable_beta": true
     },
     "qq_gruops": [{
-        "name": "一群",
+        "name": "①群",
         "key": "bWOt9vT47cUOK1CHbcyT4VDD9jNWtYK3",
         "link": "https://jq.qq.com/?_wv=1027&k=5iYUkHf",
         "number": "570582360",
-        "enabled": false
+        "enabled": true
     },{
         "name": "②群",
         "key": "BFEx19cSS50uI_6pcIYKoZX0WkSnooZj",
