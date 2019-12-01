@@ -43,7 +43,8 @@
     }],
     "supportment": [{
         "title": "支付宝领生活费",
-        "subtitle": null,
+        "subtitle": "领花呗生活费红包，最高 99 元",
+        "expire_time": 1577807999000,
         "icon": {
             "type": 0,
             "id": "ic_round_monetization_on"
