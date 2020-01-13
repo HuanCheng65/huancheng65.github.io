@@ -1,8 +1,8 @@
 {
-    "config_version": 8,
-    "config_version_name": "v8",
+    "config_version": 9,
+    "config_version_name": "v9",
     "config_download_url": "https://huancheng65.github.io/icebridge/bridge.json",
-    "app_version": 3,
-    "app_version_name": "0.0.3",
-    "app_download_url": "https://www.lanzous.com/i538xcb"
+    "app_version": 4,
+    "app_version_name": "0.0.4",
+    "app_download_url": "https://coolapk.com/apk/com.huanchengfly.icebridge"
 }

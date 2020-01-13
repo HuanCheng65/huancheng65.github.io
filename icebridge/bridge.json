@@ -1,6 +1,24 @@
 {
-    "version": 8,
+    "version": 9,
     "bridges": [{
+        "packages": ["com.sina.weibo", "com.weibo.international", "com.sina.weibolite", "com.hengye.share"],
+        "intent_filters": [{
+            "schemes": ["sinaweibo"],
+            "hosts": ["gotohome", "userinfo", "customweibosource", "groupinfo", "groupfeed", "detail", "seccomment", "article", "atriclebrowser"]
+        }, {
+            "schemes": ["http", "https"],
+            "hosts": ["weibo.cn", "weibo.com"],
+            "path_prefix": ["/u", "/status"]
+        }, {
+            "schemes": ["http", "https"],
+            "hosts": ["media.weibo.cn"],
+            "path_prefix": ["/article"]
+        }, {
+            "schemes": ["http", "https"],
+            "hosts": ["weibo.com"],
+            "path_prefix": ["/ttarticle/p/show"]
+        }]
+    }, {
         "packages": ["com.tencent.mobileqq", "com.tencent.tim"],
         "intent_filters": [{
             "schemes": ["http"],
@@ -129,7 +147,7 @@
                 "type": "int",
                 "value": "0"
             }
-        },{
+        }, {
             "class_name": "com.tencent.tauth.Tencent",
             "method_name": "login",
             "params_classes": ["Activity", "String", "com.tencent.tauth.IUiListener", "boolean"],
@@ -137,7 +155,7 @@
                 "type": "int",
                 "value": "0"
             }
-        },{
+        }, {
             "class_name": "com.tencent.tauth.Tencent",
             "method_name": "login",
             "params_classes": ["androidx.fragment.app.Fragment", "String", "com.tencent.tauth.IUiListener"],
@@ -145,7 +163,7 @@
                 "type": "int",
                 "value": "0"
             }
-        },{
+        }, {
             "class_name": "com.tencent.tauth.Tencent",
             "method_name": "login",
             "params_classes": ["androidx.fragment.app.Fragment", "String", "com.tencent.tauth.IUiListener", "boolean"],
