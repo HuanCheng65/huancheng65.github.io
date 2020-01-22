@@ -1,5 +1,10 @@
 {
     "gruops": [{
+        "type": "Telegram",
+        "name": "群组",
+        "link": "https://t.me/tblite",
+        "enabled": true
+    }, {
         "type": "QQ",
         "name": "①群",
         "link": "https://jq.qq.com/?_wv=1027&k=5iYUkHf",
@@ -13,11 +18,6 @@
         "enabled": true,
         "qq_group_key": "BFEx19cSS50uI_6pcIYKoZX0WkSnooZj",
         "qq_group_number": "716486383"
-    }, {
-        "type": "Telegram",
-        "name": "群组",
-        "link": "https://t.me/tblite",
-        "enabled": true
     }],
     "supportment": []
 }
