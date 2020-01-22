@@ -1,0 +1,23 @@
+{
+    "gruops": [{
+        "type": "QQ",
+        "name": "①群",
+        "link": "https://jq.qq.com/?_wv=1027&k=5iYUkHf",
+        "enabled": true,
+        "qq_group_key": "bWOt9vT47cUOK1CHbcyT4VDD9jNWtYK3",
+        "qq_group_number": "570582360"
+    }, {
+        "type": "QQ",
+        "name": "②群",
+        "link": "https://jq.qq.com/?_wv=1027&k=5bPQ0RD",
+        "enabled": true,
+        "qq_group_key": "BFEx19cSS50uI_6pcIYKoZX0WkSnooZj",
+        "qq_group_number": "716486383"
+    }, {
+        "type": "Telegram",
+        "name": "群组",
+        "link": "https://t.me/tblite",
+        "enabled": true
+    }],
+    "supportment": []
+}
