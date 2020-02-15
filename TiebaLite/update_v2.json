@@ -18,6 +18,13 @@
         "enabled": true,
         "qq_group_key": "BFEx19cSS50uI_6pcIYKoZX0WkSnooZj",
         "qq_group_number": "716486383"
+    }, {
+        "type": "QQ",
+        "name": "③群",
+        "link": "https://jq.qq.com/?_wv=1027&k=54Do7UO",
+        "enabled": true,
+        "qq_group_key": "LH9tJwhnUDHuJbwsy4fZnbC5L-mAytU_",
+        "qq_group_number": "1002730320"
     }],
     "supportment": []
 }
