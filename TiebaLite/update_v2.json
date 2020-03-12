@@ -7,17 +7,17 @@
     }, {
         "type": "QQ",
         "name": "①群",
-        "link": "https://jq.qq.com/?_wv=1027&k=5iYUkHf",
+        "link": "https://jq.qq.com/?_wv=1027&k=5bPQ0RD",
         "enabled": false,
-        "qq_group_key": "bWOt9vT47cUOK1CHbcyT4VDD9jNWtYK3",
-        "qq_group_number": "570582360"
+        "qq_group_key": "-XxjN4eNnD6Fz78KI--5Rb-yDUtWmGn2",
+        "qq_group_number": "716486383"
     }, {
         "type": "QQ",
         "name": "②群",
-        "link": "https://jq.qq.com/?_wv=1027&k=5bPQ0RD",
-        "enabled": false,
-        "qq_group_key": "BFEx19cSS50uI_6pcIYKoZX0WkSnooZj",
-        "qq_group_number": "716486383"
+        "link": "https://jq.qq.com/?_wv=1027&k=5AHiZTp",
+        "enabled": true,
+        "qq_group_key": "Bng8Ul5RJIUDGDhRyQUhmHdPBSnl33o4",
+        "qq_group_number": "1081193007"
     }, {
         "type": "QQ",
         "name": "③群",
