@@ -1,5 +1,5 @@
 {
-    "version": 9,
+    "version": 11,
     "bridges": [{
         "packages": ["com.sina.weibo", "com.weibo.international", "com.sina.weibolite", "com.hengye.share"],
         "intent_filters": [{
@@ -45,6 +45,9 @@
         }, {
             "schemes": ["http", "https"],
             "host": ["tieba.baidu.com"]
+        }, {
+            "schemes": ["com.baidu.tieba"],
+            "host": ["unidispatch"]
         }]
     }, {
         "packages": ["com.zhihu.android", "com.zhihu.android.lite"],
@@ -52,7 +55,7 @@
             "schemes": ["zhihu"]
         }]
     }, {
-        "packages": ["com.baidu.netdisk"],
+        "packages": ["com.baidu.netdisk", "com.baidu.netdisk.xiaomi.appunion"],
         "intent_filters": [{
             "schemes": ["baiduyun", "yundownload", "yunacceptinvite", "bdnetdiskwap", "bdnetdisk"]
         }]
